@@ -1,0 +1,85 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the items */
+    flex: 1; /* Occupy available space */
+}
+
+.menu .search-icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.search-box {
+    display: none;
+}
+
+.search-box input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Reset button to remove custom color modifications */
+.btn-secondary.dropdown-toggle {
+    background-color: #333; /* Default background color */
+    border-color: #333; /* Default border color */
+    color: #ffffff; /* Default text color */
+}
+
+/* Change the text color of dropdown items to black */
+.dropdown-menu .dropdown-item {
+    color: black; /* Black text color */
+}
+
+/* Add this CSS to change the background color on dropdown hover */
+.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #dadada; /* Pink color */
+}
+
+/* Your existing CSS */
+.hidden {
+    display: none;
+}
+
+
