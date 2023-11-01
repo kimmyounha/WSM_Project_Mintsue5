@@ -6,19 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         showGamesByTheme('all', 1, 15); // Display the first 15 items for all themes
     }
+});
 
-    const dropdownItems = document.querySelectorAll(".dropdown-item");
-
-    dropdownItems.forEach(item => {
-        item.addEventListener("click", function() {
-            const selectedText = item.textContent;
-            const displayDiv = document.getElementById('selectedText');
-            displayDiv.innerHTML = selectedText;
-
-            const selectedTheme = selectedText;
-            localStorage.setItem("selectedTheme", selectedTheme);
-            window.location.href = "index.html";
-        });
+const dropdownItems = document.querySelectorAll(".dropdown-item");
+dropdownItems.forEach(item => {
+    item.addEventListener("click", function() {
+        const selectedTheme = this.textContent;
+        localStorage.setItem("selectedTheme", selectedTheme);
+        window.location.href = "index.html";
     });
 });
 
@@ -60,7 +55,6 @@ function createGameItem(game) {
 
     return gameItem;
 }
-
 
 
 //아래쪽 숫자바 [<<] [1] [2] [>>]
