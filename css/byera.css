@@ -1,0 +1,263 @@
+/* 모든 요소에 스타일 적용 */
+* {
+    color: aliceblue;
+}
+
+body {
+    margin-top: 100px;
+    background-color: black;
+}
+
+/*게임 이름 숨기기*/
+.text-items {
+    visibility: hidden;
+}
+
+.photos-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-container {
+    border-top: 1px solid #ffffff;
+    margin-right: 10px;
+    margin-bottom: 100px;
+}
+
+.photo-container:nth-child(n+3){
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.photo-containers{
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-items {
+    display: flex;
+    flex-direction: row;
+    margin-left: 214px;
+}
+
+.photo-items:nth-child(n+2) {
+    margin-left: 114px;
+}
+
+.photo-items img {
+    margin-right: 5px;
+}
+
+.dots,
+.textdox {
+    display: flex;
+    flex-direction: row;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 13px;
+    height: 13px;
+    margin-left: 310px;
+    margin-top: -7px;
+}
+
+
+.text {
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.text:nth-child(n+2) {
+    margin-left: 290px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.button-items {
+    text-align: center;
+    margin: 10px 50px;
+}
+
+.btn {
+    margin: auto 95px;
+}
+
+.guide-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.guide-container:last-child {
+    margin-bottom: 50px;
+}
+
+.items-container {
+    margin: auto 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    .photo-items {
+        margin-left: 145px;
+    }
+    
+    .photo-items:nth-child(n+2) {
+        margin-left: 65px;
+    }
+    
+    .dot {
+        margin-left: 220px;
+    }
+    
+    .text {
+        margin-left: 210px;
+    }
+    
+    .text:nth-child(n+2) {
+        margin-left: 198px;
+    }
+    
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn {
+        margin: auto 35px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .photo-items {
+        margin-left: 85px;
+    }
+    
+    .photo-items:nth-child(n+2) {
+        margin-left: 35px;
+    }
+    
+    .dot {
+        margin-left: 130px;
+    }
+    
+    .text {
+        margin-left: 120px;
+    }
+    
+    .text:nth-child(n+2) {
+        margin-left: 110px;
+    }
+    
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn {
+        margin: auto 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .photos-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo-containers {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photo-container {
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #ffffff;
+        border-top: 1px solid #000000;
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+
+    .photo-container:nth-child(n+3){
+        border: 1px solid #ffffff;
+        border-left: #000;
+        border-right: #000;
+        margin-bottom: 0px;
+        margin-top: 100px;
+    }
+
+    .text-items {
+        visibility: visible;
+        margin-top: 124px;
+        margin-left: 10px;
+    }
+
+    .dots {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dot {
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        width: 13px;
+        height: 13px;
+        margin-left: -6px;
+        margin-top: 150px;
+    }
+    
+    .textdox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        margin-left: 0px;
+        margin-top: 143px;
+    }
+
+    .text:nth-child(n+2) {
+        margin-left: 0px;
+    }
+
+    .photo-items {
+        margin-left: 10px;
+        width: 120px;
+        margin-top: 115px;
+
+    }
+
+    .photo-items:nth-child(n+2) {
+        margin-left: 10px;
+    }
+    
+    .texts {
+        width: 150px;
+    }
+    
+    .btn {
+        margin: 20px  5px;
+    }
+    
+    img{
+        width: 50px;
+        height: 50px;
+        margin: auto 5px;
+    }
+    
+    .guide-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    
+    .items-container {
+        margin-left: 20px;
+    }
+}

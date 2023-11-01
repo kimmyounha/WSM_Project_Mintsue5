@@ -85,15 +85,15 @@ let games = [
     },
     {
         "id": 13,
-        "title": "역타이쿤",
-        "theme": "타이쿤",
+        "title": "검색1",
+        "theme": "검색2",
         "times": "10s",
         "img": "./images/3. 역타이쿤.jpg",
     },
     {
         "id": 14,
-        "title": "유연함의 힘",
-        "theme": "유연",
+        "title": "검색2",
+        "theme": "검색1",
         "times": "10s",
         "img": "./images/4. 유연함의 힘.jpg",
     },
@@ -211,15 +211,3 @@ let games = [
     },
     
 ]
-
-let genre = [
-    { "id": 1, "title": "롤플레잉" },
-    { "id": 2, "title": "퍼즐" },
-    { "id": 3, "title": "시뮬레이션" },
-    { "id": 4, "title": "스포츠" },
-    { "id": 5, "title": "슈팅" },
-    { "id": 6, "title": "액션" },
-    { "id": 7, "title": "타이쿤" },
-    { "id": 8, "title": "카드" },
-    { "id": 9, "title": "퀴즈" }
-];
