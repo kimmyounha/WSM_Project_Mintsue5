@@ -1,12 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     const selectedTheme = localStorage.getItem("selectedTheme");
     if (selectedTheme) {
-        showGamesByTheme(selectedTheme); // Display all items for the selected theme
+        showGamesByTheme(selectedTheme);
         localStorage.removeItem("selectedTheme");
+        displaySelectedTheme(selectedTheme);
     } else {
-        showAllGames(); // Display all items for all themes
+        showAllGames(); 
     }
 });
+
+function displaySelectedTheme(theme) {
+    const selectedItemDisplay = document.getElementById('selectedItemDisplay');
+    selectedItemDisplay.textContent = `Selected Theme: ${theme}`;
+}
 
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 dropdownItems.forEach(item => {
@@ -66,6 +72,9 @@ function createGameItem(game) {
     return gameItem;
 }
 
+
+
+//검색 (title에서 가져옴)
 searchButton.addEventListener("click", () => {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     window.location.href = `index.html?search=${searchInput}`;
@@ -103,8 +112,6 @@ function clearGameDisplay() {
     const gameshelf = document.querySelector(".gameshelf");
     gameshelf.innerHTML = '';
 }
-
-
 
 
 //아래쪽 숫자바 [<<] [1] [2] [>>]
