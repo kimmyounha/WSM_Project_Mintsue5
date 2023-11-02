@@ -5,9 +5,13 @@
 
 }
 .genertitle hr {
-    max-width: 85%;
+    max-width: 90%;
     margin: 0 auto; /* 수평 가운데 정렬 */
 }
+.selectedItemDisplay{
+    color: aliceblue;
+}
+
 .gameshelf {
     display: flex;
     gap: 40px;
