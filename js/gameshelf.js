@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const selectedTheme = localStorage.getItem("selectedTheme");
     if (selectedTheme) {
-        showGamesByTheme(selectedTheme, 1, 15); // Display the first 15 items for the selected theme
+        showGamesByTheme(selectedTheme); // Display all items for the selected theme
         localStorage.removeItem("selectedTheme");
     } else {
-        showGamesByTheme('all', 1, 15); // Display the first 15 items for all themes
+        showAllGames(); // Display all items for all themes
     }
 });
 
@@ -17,18 +17,28 @@ dropdownItems.forEach(item => {
     });
 });
 
-function showGamesByTheme(theme, start, end) {
+function showGamesByTheme(theme) {
     const gameshelf = document.querySelector(".gameshelf");
     gameshelf.innerHTML = '';
 
     let filteredGames = [];
     if (theme.toLowerCase() === 'all') {
-        filteredGames = games.slice(start - 1, end);
+        filteredGames = games;
     } else {
-        filteredGames = games.filter(game => game.theme === theme).slice(start - 1, end);
+        filteredGames = games.filter(game => game.theme === theme);
     }
 
     filteredGames.forEach(game => {
+        const gameItem = createGameItem(game);
+        gameshelf.appendChild(gameItem);
+    });
+}
+
+function showAllGames() {
+    const gameshelf = document.querySelector(".gameshelf");
+    gameshelf.innerHTML = '';
+
+    games.forEach(game => {
         const gameItem = createGameItem(game);
         gameshelf.appendChild(gameItem);
     });
@@ -55,6 +65,46 @@ function createGameItem(game) {
 
     return gameItem;
 }
+
+searchButton.addEventListener("click", () => {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    window.location.href = `index.html?search=${searchInput}`;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+  
+    if (searchParam) {
+        const searchInput = searchParam.toLowerCase();
+        const searchResult = games.filter(game => game.title.toLowerCase().includes(searchInput));
+
+        if (searchResult.length > 0) {
+            displayMatchingGames(searchResult);
+            document.getElementById('noResultsMessage').style.display = 'none'; // Hide the message if there are matching results
+        } else {
+            document.getElementById('noResultsMessage').style.display = 'block'; // Display the message if no matching results are found
+            clearGameDisplay();
+        }
+    }
+});
+
+function displayMatchingGames(matchedGames) {
+    const gameshelf = document.querySelector(".gameshelf");
+    gameshelf.innerHTML = '';
+
+    matchedGames.forEach(game => {
+        const gameItem = createGameItem(game);
+        gameshelf.appendChild(gameItem);
+    });
+}
+
+function clearGameDisplay() {
+    const gameshelf = document.querySelector(".gameshelf");
+    gameshelf.innerHTML = '';
+}
+
+
 
 
 //아래쪽 숫자바 [<<] [1] [2] [>>]

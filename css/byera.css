@@ -8,11 +8,6 @@ body {
     background-color: black;
 }
 
-/*게임 이름 숨기기*/
-.text-items {
-    visibility: hidden;
-}
-
 .photos-container {
     display: flex;
     flex-direction: column;
@@ -46,7 +41,10 @@ body {
 
 .photo-items img {
     margin-right: 5px;
+    width: 80px;
+    height: 80px;
 }
+
 
 .dots,
 .textdox {
@@ -62,7 +60,6 @@ body {
     margin-left: 310px;
     margin-top: -7px;
 }
-
 
 .text {
     margin-left: 300px;
@@ -84,7 +81,7 @@ img {
     margin: 10px 50px;
 }
 
-.btn {
+.btn-era {
     margin: auto 95px;
 }
 
@@ -128,7 +125,7 @@ img {
         height: 80px;
     }
 
-    .btn {
+    .btn-era {
         margin: auto 35px;
     }
 }
@@ -159,7 +156,7 @@ img {
         height: 50px;
     }
 
-    .btn {
+    .btn-era {
         margin: auto 10px;
     }
 }
@@ -241,7 +238,7 @@ img {
         width: 150px;
     }
     
-    .btn {
+    .btn-era {
         margin: 20px  5px;
     }
     

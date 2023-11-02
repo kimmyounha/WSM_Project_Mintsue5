@@ -52,6 +52,12 @@ body{
     background-color: black;
 }
 
+.search-none{
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
 /* 태블릿 사이즈에 대한 스타일 변경 */
 @media (max-width: 720px) {
     .gameshelf {

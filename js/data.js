@@ -2,120 +2,137 @@ let games = [
     {
         "id": 1,                            //id
         "title": "테트리스",                //제목
-        "theme": "롤플레잉",                  //게임 종류(장르)
-        "times": "10s",                     //시대
+        "theme": "퍼즐",                  //게임 종류(장르)
+        "times": "1985",                     //시대
+        "onesummary": "",
         "img": "./images/1.테트리스.png",   //이미지 경로
     },
     {
         "id": 2,
         "title": "슈의 라면 가게",
-        "theme": "퍼즐",
+        "theme": "타이쿤",
         "times": "10s",
+        "onesummary": "슈게임 중 하나로 라면을 끓여 손님에게 팔아 목표액 10,000원을 달성해 클리어하는 게임",
         "img": "./images/2.슈라면가게.png",
     },
     {
         "id": 3,
-        "title": "The BINDING OF ISAAC",
-        "theme": "타이쿤",
+        "title": "아이작의 번제(The BINDING OF ISAAC)",
+        "theme": "액션",
         "times": "10s",
+        "onesummary": "구양성경에 등장하는 아브라함의 아들 이사악의 희생 이야기를 모티브로 한 게임",
         "img": "./images/3.아이작.png",
     },
     {
         "id": 4,
         "title": "메이플스토리",
-        "theme": "유연",
+        "theme": "롤플레잉",
         "times": "10s",
+        "onesummary": "세계 최초의 횡스크롤 MMORPG를 표방하고 있으며, 다채로운 필드에서의 여행과 모험을 강조한 게임",
         "img": "./images/4.메이플스토리.png",
     },
     {
         "id": 5,
         "title": "황새 게임",
-        "theme": "나죽지",
+        "theme": "아케이드",
         "times": "10s",
+        "onesummary": "계속해서 걸어가는 황새를 컨트롤하여 넘어지지 않고 균형을 잡아 최대한 멀리 가는 것이 목표인 게임",
         "img": "./images/5.황새게임.png",
     },
     {
         "id": 6,
         "title": "액션! 동물농장",
-        "theme": "코드",
+        "theme": "롤플레잉",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/6.액션동물농장.png",
     },
     {
         "id": 7,
         "title": "오목",
-        "theme": "박태웅",
+        "theme": "퍼즐",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/7.오목.png",
     },
     {
         "id": 8,
         "title": "카트라이더",
-        "theme": "장학",
+        "theme": "스포츠",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/8.카트라이더.png",
     },
     {
         "id": 9,
         "title": "고향 만두",
-        "theme": "당결",
+        "theme": "타이쿤",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/9.고향만두.png",
     },
     {
         "id": 10,
         "title": "사과 게임",
-        "theme": "씽",
+        "theme": "퍼즐",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/10.사과게임.jpg",
     },
     {
         "id": 11,
         "title": "수박 게임",
-        "theme": "롤플레잉",
+        "theme": "퍼즐",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/11.수박게임.png",
     },
     {
         "id": 12,
-        "title": "인생에서 8가지 일에만 집중하라",
-        "theme": "퍼즐",
+        "title": "마리오",
+        "theme": "액션",
         "times": "10s",
-        "img": "./images/2. 인생에서 8가지 일에만 집중하라.jpg",
+        "onesummary": "",
+        "img": "./images/2. 마리오.jpg",
     },
     {
         "id": 13,
-        "title": "검색1",
-        "theme": "검색2",
+        "title": "스네이크 게임",
+        "theme": "롤플레잉",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/3. 역타이쿤.jpg",
     },
     {
         "id": 14,
-        "title": "검색2",
-        "theme": "검색1",
+        "title": "슈팅게임(갤러가)",
+        "theme": "아케이드",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/4. 유연함의 힘.jpg",
     },
     {
         "id": 15,
-        "title": "유연함의 힘",
-        "theme": "유연",
+        "title": "벽돌깨기",
+        "theme": "아케이드",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/4. 유연함의 힘.jpg",
     },
     {
-        "id": 16,                            //id
-        "title": "테트리스",                //제목
-        "theme": "롤플레잉",                  //게임 종류(장르)
-        "times": "10s",                     //시대
-        "img": "./images/1.테트리스.png",   //이미지 경로
+        "id": 16,
+        "title": "2048",
+        "theme": "퍼즐",
+        "times": "10s",
+        "onesummary": "",
+        "img": "./images/1.테트리스.png",
     },
     {
         "id": 17,
         "title": "슈의 라면 가게",
         "theme": "퍼즐",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/2.슈라면가게.png",
     },
     {
@@ -123,6 +140,7 @@ let games = [
         "title": "The BINDING OF ISAAC",
         "theme": "타이쿤",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/3.아이작.png",
     },
     {
@@ -130,6 +148,7 @@ let games = [
         "title": "메이플스토리",
         "theme": "유연",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/4.메이플스토리.png",
     },
     {
@@ -137,6 +156,7 @@ let games = [
         "title": "황새 게임",
         "theme": "나죽지",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/5.황새게임.png",
     },
     {
@@ -144,6 +164,7 @@ let games = [
         "title": "액션! 동물농장",
         "theme": "코드",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/6.액션동물농장.png",
     },
     {
@@ -151,6 +172,7 @@ let games = [
         "title": "오목",
         "theme": "박태웅",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/7.오목.png",
     },
     {
@@ -158,6 +180,7 @@ let games = [
         "title": "카트라이더",
         "theme": "장학",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/8.카트라이더.png",
     },
     {
@@ -165,6 +188,7 @@ let games = [
         "title": "고향 만두",
         "theme": "당결",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/9.고향만두.png",
     },
     {
@@ -172,6 +196,7 @@ let games = [
         "title": "사과 게임",
         "theme": "씽",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/10.사과게임.jpg",
     },
     {
@@ -179,20 +204,23 @@ let games = [
         "title": "수박 게임",
         "theme": "롤플레잉",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/11.수박게임.png",
     },
     {
         "id": 27,
-        "title": "인생에서 8가지 일에만 집중하라",
+        "title": "마리오",
         "theme": "퍼즐",
         "times": "10s",
-        "img": "./images/2. 인생에서 8가지 일에만 집중하라.jpg",
+        "onesummary": "",
+        "img": "./images/2. 마리오.jpg",
     },
     {
         "id": 28,
         "title": "역타이쿤",
         "theme": "타이쿤",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/3. 역타이쿤.jpg",
     },
     {
@@ -200,6 +228,7 @@ let games = [
         "title": "유연함의 힘",
         "theme": "유연",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/4. 유연함의 힘.jpg",
     },
     {
@@ -207,6 +236,7 @@ let games = [
         "title": "유연함의 힘",
         "theme": "유연",
         "times": "10s",
+        "onesummary": "",
         "img": "./images/4. 유연함의 힘.jpg",
     },
     
