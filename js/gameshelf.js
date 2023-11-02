@@ -73,14 +73,29 @@ function createGameItem(game) {
 }
 
 
-
-//검색 (title에서 가져옴)
-searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("searchInput").value.toLowerCase();
-    window.location.href = `index.html?search=${searchInput}`;
+// enter로 검색
+document.getElementById("searchInput").addEventListener("keydown", function(event) {
+    // Enter 키 눌렀는지 확인 (Enter 키의 keyCode는 13)
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        event.preventDefault(); // 기본 엔터 키 동작 방지
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        window.location.href = `index.html?search=${searchInput}`;
+    }
 });
 
+// 이미 존재하는 click 이벤트에 대한 코드를 캡슐화하는 것이 좋습니다.
+searchButton.addEventListener("click", searchFunction);
+
+function searchFunction() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    window.location.href = `index.html?search=${searchInput}`;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+    handleSearch();
+});
+
+function handleSearch() {
     const urlParams = new URLSearchParams(window.location.search);
     const searchParam = urlParams.get('search');
   
@@ -96,6 +111,16 @@ document.addEventListener("DOMContentLoaded", function() {
             clearGameDisplay();
         }
     }
+}
+
+//버튼 눌렀을때 검색
+searchButton.addEventListener("click", () => {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    window.location.href = `index.html?search=${searchInput}`;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    handleSearch();
 });
 
 function displayMatchingGames(matchedGames) {
@@ -112,7 +137,6 @@ function clearGameDisplay() {
     const gameshelf = document.querySelector(".gameshelf");
     gameshelf.innerHTML = '';
 }
-
 
 //아래쪽 숫자바 [<<] [1] [2] [>>]
 document.addEventListener("DOMContentLoaded", function() {
