@@ -3,7 +3,7 @@ let games = [
         "id": 1,                            //id
         "title": "테트리스",                //제목
         "theme": "퍼즐",                  //게임 종류(장르)
-        "times": "1985",                     //시대
+        "times": "1980",                     //시대
         "onesummary": "",
         "img": "./images/1.테트리스.png",   //이미지 경로
     },
@@ -11,7 +11,7 @@ let games = [
         "id": 2,
         "title": "슈의 라면 가게",
         "theme": "타이쿤",
-        "times": "10s",
+        "times": "1980",
         "onesummary": "슈게임 중 하나로 라면을 끓여 손님에게 팔아 목표액 10,000원을 달성해 클리어하는 게임",
         "img": "./images/2.슈라면가게.png",
     },

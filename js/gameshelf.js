@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function displaySelectedTheme(theme) {
     const selectedItemDisplay = document.getElementById('selectedItemDisplay');
-    selectedItemDisplay.textContent = `Selected Theme: ${theme}`;
+    selectedItemDisplay.textContent = `${theme}`;      //dropdown에서 선택한 장르
 }
 
 const dropdownItems = document.querySelectorAll(".dropdown-item");

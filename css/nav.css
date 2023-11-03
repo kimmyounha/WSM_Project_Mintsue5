@@ -28,8 +28,8 @@
 .menu {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center align the items */
-    flex: 1; /* Occupy available space */
+    justify-content: center;
+    flex: 1;
 }
 
 .menu .search-icon {
@@ -60,24 +60,20 @@
     cursor: pointer;
 }
 
-/* Reset button to remove custom color modifications */
 .btn-secondary.dropdown-toggle {
-    background-color: #333; /* Default background color */
-    border-color: #333; /* Default border color */
-    color: #ffffff; /* Default text color */
+    background-color: #333;
+    border-color: #333;
+    color: #ffffff;
 }
 
-/* Change the text color of dropdown items to black */
 .dropdown-menu .dropdown-item {
-    color: black; /* Black text color */
+    color: black;
 }
 
-/* Add this CSS to change the background color on dropdown hover */
 .dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: #dadada; /* Pink color */
+    background-color: #dadada; 
 }
 
-/* Your existing CSS */
 .hidden {
     display: none;
 }
@@ -89,8 +85,12 @@
 .input-group{
     width: 95%;
 }
+
 /* 태블릿 크기 */
 @media (max-width: 720px) {
+    .menu{
+        flex: auto;
+    }
     .menu a,
     .menu .dropdown-menu a {
         font-size: 16px; /* 태블릿에서 글자 크기 조정 */
@@ -111,14 +111,18 @@
         float: right;
     }
     .input-group{
-        width: 90%;
         float: right;
     }
-    
+    .menu .search-icon {
+        margin-right: 0px;
+    }
 }
 
 /* 핸드폰 크기 */
 @media (max-width: 549px) {
+    .menu{
+        flex: auto;
+    }
     .menu a,
     .menu .dropdown-menu a {
         font-size: 14px; /* 핸드폰에서 글자 크기 추가로 조정 */
@@ -133,9 +137,5 @@
     }
     .input-group button {
         font-size: 12px; /* 버튼 폰트 크기 */
-    }
-    .input-group{
-        width: 70%;
-        float: right;
     }
 }

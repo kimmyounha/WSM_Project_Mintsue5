@@ -2,13 +2,16 @@
 .genertitle{
     color: aliceblue;
     margin-top: calc(44px + 100px);
+    width: 90%;
 
 }
-.genertitle hr {
+hr {
     max-width: 90%;
+    color: aliceblue;
     margin: 0 auto; /* 수평 가운데 정렬 */
+    
 }
-.selectedItemDisplay{
+.genertitle .selectedItemDisplay{
     color: aliceblue;
 }
 

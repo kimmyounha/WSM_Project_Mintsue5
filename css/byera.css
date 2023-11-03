@@ -8,6 +8,11 @@ body {
     background-color: black;
 }
 
+/*게임 이름 숨기기*/
+.text-items {
+    visibility: hidden;
+}
+
 .photos-container {
     display: flex;
     flex-direction: column;
@@ -41,10 +46,7 @@ body {
 
 .photo-items img {
     margin-right: 5px;
-    width: 80px;
-    height: 80px;
 }
-
 
 .dots,
 .textdox {
@@ -61,6 +63,7 @@ body {
     margin-top: -7px;
 }
 
+
 .text {
     margin-left: 300px;
     margin-top: 10px;
@@ -70,7 +73,8 @@ body {
     margin-left: 290px;
 }
 
-img {
+.photo img,
+.gamePhoto img {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -97,6 +101,8 @@ img {
 
 .items-container {
     margin: auto 15px;
+    border:1px solid #fff;
+    width: 80%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -120,7 +126,7 @@ img {
         margin-left: 198px;
     }
     
-    img {
+    .photo img {
         width: 80px;
         height: 80px;
     }
@@ -128,6 +134,34 @@ img {
     .btn-era {
         margin: auto 35px;
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .photo-items {
+        margin-left: 110px;
+    }
+    
+    .photo-items:nth-child(n+2) {
+        margin-left: 45px;
+    }
+    
+    .dot {
+        margin-left: 180px;
+    }
+    
+    .text {
+        margin-left: 165px;
+    }
+    
+    .text:nth-child(n+2) {
+        margin-left: 160px;
+    }
+
+    .photo img {
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -151,7 +185,7 @@ img {
         margin-left: 110px;
     }
     
-    img {
+    .photo img {
         width: 50px;
         height: 50px;
     }
@@ -216,7 +250,7 @@ img {
 
     .text {
         margin-left: 0px;
-        margin-top: 143px;
+        margin-top: 140px;
     }
 
     .text:nth-child(n+2) {
@@ -226,23 +260,27 @@ img {
     .photo-items {
         margin-left: 10px;
         width: 120px;
-        margin-top: 115px;
-
+        margin-top: 125px;
     }
 
     .photo-items:nth-child(n+2) {
         margin-left: 10px;
+        margin-top: 115px;
     }
     
     .texts {
         width: 150px;
+    }
+
+    .texts:nth-child(n+2) {
+        margin-top: -5px;
     }
     
     .btn-era {
         margin: 20px  5px;
     }
     
-    img{
+    .photo img{
         width: 50px;
         height: 50px;
         margin: auto 5px;
