@@ -1,20 +1,20 @@
-// 모든 comment-box 요소 선택
-const commentBoxes = document.querySelectorAll('.comment-box');
+document.addEventListener("DOMContentLoaded", function() {
+    const commentForm = document.getElementById('commentForm');
+    const commentInput = document.getElementById('commentInput');
 
-commentBoxes.forEach(commentBox => {
-    // 현재 comment-box 내의 요소 선택
-    const commentContent = commentBox.querySelector('.comment-content');
-    const textContent = commentContent.textContent.length;
+    commentForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the default form submission
 
-    const profileImage = commentBox.querySelector('.profile-image');
-    const imageWidth = profileImage.getBoundingClientRect().width;
+        const comment = commentInput.value; // Get the comment text
 
-    // comment-box의 최소 너비
-    const minCommentBoxWidth = 50; // 최소 너비를 조정해보세요
+        // Here you can save the 'comment' to comment.js or perform any other desired action
+        // For example, if using Local Storage:
+        localStorage.setItem('userComment', comment);
 
-    // comment-box의 너비를 textContent의 길이와 이미지의 너비를 고려하여 설정
-    const newCommentBoxWidth = Math.max(minCommentBoxWidth + (textContent * 8) + imageWidth);
+        // Clear the form after submission (Optional)
+        commentInput.value = '';
 
-    // comment-box에 너비 설정
-    commentBox.style.width = newCommentBoxWidth + 'px';
+        // Alert the user or perform any other actions upon successful submission
+        alert('Comment submitted successfully!');
+    });
 });

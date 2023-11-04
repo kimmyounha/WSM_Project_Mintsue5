@@ -139,33 +139,86 @@ function clearGameDisplay() {
 }
 
 //아래쪽 숫자바 [<<] [1] [2] [>>]
-document.addEventListener("DOMContentLoaded", function() {
-    const pagination = document.querySelector(".pagination");
-    const dataCount = 30; // Replace this with the actual count of your data
-    const itemsPerPage = 15; // Define the number of items per page
+document.addEventListener("DOMContentLoaded", function () {
+    const gameshelf = document.querySelector(".gameshelf");
+    let itemsPerPage = 15; // Default number of items per page
 
-    const numberOfPages = Math.ceil(dataCount / itemsPerPage);
+    const gameItems = document.querySelectorAll('.game-item');
 
-    const prevLink = document.createElement("li");
-    const prevAnchor = document.createElement("a");
-    prevAnchor.href = "prev";
-    prevAnchor.textContent = "<<";
-    prevLink.appendChild(prevAnchor);
-    pagination.appendChild(prevLink);
+    // Function to show items based on the page number
+    function showItems(pageNumber) {
+        const startIndex = (pageNumber - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
 
-    for (let i = 1; i <= numberOfPages; i++) {
-        const pageLink = document.createElement("li");
-        const anchor = document.createElement("a");
-        anchor.href = i.toString();
-        anchor.textContent = i;
-        pageLink.appendChild(anchor);
-        pagination.appendChild(pageLink);
+        gameItems.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
     }
 
-    const nextLink = document.createElement("li");
-    const nextAnchor = document.createElement("a");
-    nextAnchor.href = "next";
-    nextAnchor.textContent = ">>";
-    nextLink.appendChild(nextAnchor);
-    pagination.appendChild(nextLink);
+    function adjustItemsPerPage() {
+        if (window.innerWidth <= 549) { // For screens 549px or less
+            itemsPerPage = 16;
+        } else {
+            itemsPerPage = 15;
+        }
+        showItems(1); // Show the first page after the adjustment
+    }
+
+    window.addEventListener('resize', adjustItemsPerPage);
+    adjustItemsPerPage(); // Initial adjustment when the page loads
+
+    // Pagination section
+    const pagination = document.querySelector(".pagination");
+
+    // Function to calculate the number of pages based on the items per page
+    function updatePagination() {
+        const numberOfPages = Math.ceil(gameItems.length / itemsPerPage);
+
+        // Clear existing pagination links
+        pagination.innerHTML = '';
+
+        // Create pagination links
+        for (let i = 1; i <= numberOfPages; i++) {
+            const pageLink = document.createElement("li");
+            const anchor = document.createElement("a");
+            anchor.href = "#";
+            anchor.textContent = i;
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                showItems(i);
+            });
+            pageLink.appendChild(anchor);
+            pagination.appendChild(pageLink);
+        }
+
+        // Add first and last page links
+        const firstLink = document.createElement("li");
+        const firstAnchor = document.createElement("a");
+        firstAnchor.href = "#";
+        firstAnchor.textContent = '<<';
+        firstAnchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            showItems(1);
+        });
+        firstLink.appendChild(firstAnchor);
+        pagination.insertBefore(firstLink, pagination.firstChild);
+
+        const lastLink = document.createElement("li");
+        const lastAnchor = document.createElement("a");
+        lastAnchor.href = "#";
+        lastAnchor.textContent = '>>';
+        lastAnchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            showItems(numberOfPages);
+        });
+        lastLink.appendChild(lastAnchor);
+        pagination.appendChild(lastLink);
+    }
+
+    window.addEventListener('resize', updatePagination);
+    updatePagination(); // Initial pagination when the page loads
 });

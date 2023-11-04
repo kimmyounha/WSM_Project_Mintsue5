@@ -3,12 +3,10 @@ function reply_click(button) {
     const textbox = document.getElementById('textbox');
     textbox.textContent = buttonValue;
 }
-
 function reply_click(id) {
     const ids = id.split('-');
     const firstId = parseInt(ids[0]);
     const secondId = parseInt(ids[1]);
-
 
     let FirstId = parseInt(firstId);  
     let SecondId = parseInt(secondId);  
@@ -50,17 +48,13 @@ function reply_click(id) {
     const img1Div = document.getElementsByClassName("gamePhoto")[1];
     img1Div.innerHTML = `<img src="${img1}" />`;
 
-
     const TitleDiv = document.getElementsByClassName("gameName")[0];
     TitleDiv.innerHTML = title;
 
     const Title1Div = document.getElementsByClassName("gameName")[1];
     Title1Div.innerHTML = title1;
 
-
-
     const timesDiv = document.getElementsByClassName("textbox")[0];
     timesDiv.innerHTML = times;
 
-    
 }

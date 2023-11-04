@@ -3,25 +3,62 @@ main{
     margin-top: calc(44px + 100px);
     margin-bottom: 100px;
 }
+/*게임 title, img*/
+.image-info-groups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  
+  .book-image img {
+    width: 100%;
+    max-width: 100%; /* Ensures the image does not exceed its original size */
+  }
+  
+  
+/*댓글입력 받는 부분*/
+.comment-reg{
+    border: solid 3px black;
+}
 
 textarea {
-    width: 100%;
+    width: 90%;
     height: 6.25em;
     border: none;
     resize: none;
     border: 2px solid rgb(255, 255, 255);
     outline-color: #ffffff;
-  } 
+  }
+  .row{
+    border-top: solid #0A1128 3px ;
+  }
 
+  .comment-button {
+    border-left: solid #0A1128 3px;
+    color: #0A1128;
+    background-color: #CCCCCC;
+    width: 100%;
+    border: none; /* 테두리 제거 */
+    outline: none; /* 포커스 시 테두리 제거 */
+  }
+
+  .comment-button:hover {
+    background-color: #bbb;
+  }
+  
+  
+/*댓글 보여주는 부분*/
   .comment-box {
     display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center;
+    justify-content: center;
     padding: 6px;
     border-radius: 55px; /* 둥근 사각형으로 설정 */
     transition: width 0.3s;
-    background-color: #0A1128; /* 배경색 남색으로 설정 */
-    color: white; /* 글자색 흰색으로 설정 */
+    background-color: #0A1128;
+    color: white;
     
 }
 
@@ -32,18 +69,18 @@ textarea {
     margin-right: 10px;
 }
 
-
 .comment-content {
     flex: 1;
 }
 
-.book-image {
-    width: 90%; /* 가로 크기 조정 */
-    height: 50%; /* 세로 크기 조정 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 10px solid black; /* 검정 선 두께 설정 */
-    margin: 0 auto; /* 수평 가운데 정렬 */
+/* 태블릿 사이즈에 대한 스타일 변경 */
+@media (max-width: 720px) {
+
 }
 
+/* 핸드폰 사이즈에 대한 스타일 변경 */
+@media (max-width: 549px) {
+    main{
+        margin-top: calc(44px + 70px);
+    }
+}

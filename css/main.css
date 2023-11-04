@@ -3,7 +3,6 @@
     color: aliceblue;
     margin-top: calc(44px + 100px);
     width: 90%;
-
 }
 hr {
     max-width: 90%;
@@ -28,8 +27,8 @@ hr {
 }
 
 .game-item {
-    width: 180px;
-    height: 180px;
+    width: 175px;
+    height: 175px;
     margin-bottom: 70px;
     border-radius: 1px;
 }
@@ -91,6 +90,9 @@ body{
         font-size: 10px;
         color: rgb(108, 140, 255);
     }
+    .gameshelf {
+        margin-bottom: 60px;
+    }
 }
 
 /* 핸드폰 사이즈에 대한 스타일 변경 */
@@ -129,12 +131,13 @@ body{
     margin: 0 5px;
 }
 .pagination a {
+    background-color: #f0f0f0;
     text-decoration: none;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #333;
     border-radius: 5px;
     color: #333;
 }
 .pagination a:hover {
-    background: #f0f0f0;
+    background: #33333356;
 }

@@ -86,6 +86,43 @@
     width: 95%;
 }
 
+/*footer 스타일*/
+.main-footer {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid black;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    position: static;
+  }
+  
+  .main-footer li {
+    display: inline;
+  }
+  
+  .footerTitle {
+    font-size: 15px;
+  }
+  
+  .developerFooter {
+    margin-right: 17px;
+  }
+  
+  /* footer */
+  footer {
+    font-size: 12px;
+    background: #444;
+    margin-top: 150px;
+    color: rgba(240, 248, 255, 0.963);
+  }
+  
+  .footer-icon{
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
 /* 태블릿 크기 */
 @media (max-width: 720px) {
     .menu{
@@ -116,6 +153,34 @@
     .menu .search-icon {
         margin-right: 0px;
     }
+        /* footer */
+  .footerTitle {
+    font-size: 15px;
+  }
+  
+  .developerFooter {
+    margin-right: 17px;
+  }
+  
+  /* footer */
+  
+  .footerTitle {
+    font-size: 13px;
+    font-weight:600;
+  }
+
+  footer {
+    font-size: 9px;
+  }
+
+  .main-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .footer-icon{
+    font-size: 14px;
+    margin-right: 6px;
+  }
 }
 
 /* 핸드폰 크기 */
@@ -138,4 +203,8 @@
     .input-group button {
         font-size: 12px; /* 버튼 폰트 크기 */
     }
+    .footer-icon{
+        font-size: 12px;
+        margin-right: 5px;
+      }
 }
