@@ -4,8 +4,8 @@
 }
 
 body {
+    background-color: #000;
     margin-top: 100px;
-    background-color: black;
 }
 
 /*게임 이름 숨기기*/
@@ -22,6 +22,7 @@ body {
     border-top: 1px solid #ffffff;
     margin-right: 10px;
     margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 .photo-container:nth-child(n+3){
@@ -37,15 +38,16 @@ body {
 .photo-items {
     display: flex;
     flex-direction: row;
-    margin-left: 214px;
+    margin-left: 185px;
 }
 
 .photo-items:nth-child(n+2) {
-    margin-left: 114px;
+    margin-left: 85px;
 }
 
 .photo-items img {
     margin-right: 5px;
+    border: 2px solid #ffffff5e;
 }
 
 .dots,
@@ -59,18 +61,18 @@ body {
     background-color: rgb(255, 255, 255);
     width: 13px;
     height: 13px;
-    margin-left: 310px;
+    margin-left: 280px;
     margin-top: -7px;
 }
 
 
 .text {
-    margin-left: 300px;
+    margin-left: 270px;
     margin-top: 10px;
 }
 
 .text:nth-child(n+2) {
-    margin-left: 290px;
+    margin-left: 260px;
 }
 
 .photo img,
@@ -85,7 +87,7 @@ body {
     margin: 10px 50px;
 }
 
-.btn-era {
+.active {
     margin: auto 95px;
 }
 
@@ -131,30 +133,30 @@ body {
         height: 80px;
     }
 
-    .btn-era {
+    .active {
         margin: auto 35px;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
     .photo-items {
-        margin-left: 110px;
+        margin-left: 93px;
     }
     
     .photo-items:nth-child(n+2) {
-        margin-left: 45px;
+        margin-left: 25px;
     }
     
     .dot {
-        margin-left: 180px;
+        margin-left: 160px;
     }
     
     .text {
-        margin-left: 165px;
+        margin-left: 145px;
     }
     
     .text:nth-child(n+2) {
-        margin-left: 160px;
+        margin-left: 140px;
     }
 
     .photo img {
@@ -166,23 +168,23 @@ body {
 
 @media screen and (max-width: 720px) {
     .photo-items {
-        margin-left: 85px;
+        margin-left: 70px;
     }
     
     .photo-items:nth-child(n+2) {
-        margin-left: 35px;
+        margin-left: 18px;
     }
     
     .dot {
-        margin-left: 130px;
+        margin-left: 115px;
     }
     
     .text {
-        margin-left: 120px;
+        margin-left: 105px;
     }
     
     .text:nth-child(n+2) {
-        margin-left: 110px;
+        margin-left: 92px;
     }
     
     .photo img {
@@ -190,7 +192,7 @@ body {
         height: 50px;
     }
 
-    .btn-era {
+    .active {
         margin: auto 10px;
     }
 }
@@ -213,6 +215,7 @@ body {
         border-top: 1px solid #000000;
         margin-left: 10px;
         margin-bottom: 0px;
+        margin-top: -70px;
     }
 
     .photo-container:nth-child(n+3){
@@ -276,7 +279,7 @@ body {
         margin-top: -5px;
     }
     
-    .btn-era {
+    .active {
         margin: 20px  5px;
     }
     

@@ -1,261 +1,387 @@
 let games = [
     {
-        "id": 1,                            //id
-        "title": "테트리스",                //제목
-        "theme": "퍼즐",                  //게임 종류(장르)
-        "times": "1980",                     //시대
-        "onesummary": "",
-        "img": "./images/1.테트리스.png",   //이미지 경로
+        "id": 1,
+        "title": "수박 게임",
+        "theme": "퍼즐",
+        "times": "2020",
+        "onesummary": "처음 제시된 과일을 아래에 있는 똑같은 과일에 떨어뜨려 점점 커지게 만들어 새로운 과일을 만들어 수박을 만드는 게임",
+        "img": "./images/1.수박게임.png"
     },
+
     {
         "id": 2,
-        "title": "슈의 라면 가게",
-        "theme": "타이쿤",
-        "times": "1980",
-        "onesummary": "슈게임 중 하나로 라면을 끓여 손님에게 팔아 목표액 10,000원을 달성해 클리어하는 게임",
-        "img": "./images/2.슈라면가게.png",
+        "title": "사과 게임",
+        "theme": "퍼즐",
+        "times": "2020",
+        "onesummary": "각 사과를 더하여 10을 맞춰 하나씩 사과판을 깨주어 점수를 올린다.",
+        "img": "./images/2.사과게임.png"
     },
     {
         "id": 3,
-        "title": "아이작의 번제(The BINDING OF ISAAC)",
-        "theme": "액션",
-        "times": "100",
-        "onesummary": "구양성경에 등장하는 아브라함의 아들 이사악의 희생 이야기를 모티브로 한 게임",
-        "img": "./images/3.아이작.png",
+        "title": "황새 게임",
+        "theme": "아케이드",
+        "times": "2020",
+        "onesummary": "계속해서 걸어가는 황새를 컨트롤하여 넘어지지 않고 균형을 잡아 최대한 멀리 가는 것이 목표인 게임",
+        "img": "./images/3.황새게임.png"
     },
     {
         "id": 4,
-        "title": "메이플스토리",
-        "theme": "롤플레잉",
-        "times": "100",
-        "onesummary": "세계 최초의 횡스크롤 MMORPG를 표방하고 있으며, 다채로운 필드에서의 여행과 모험을 강조한 게임",
-        "img": "./images/4.메이플스토리.png",
+        "title": "엔젤타자왕",
+        "theme": "액션",
+        "times": "2015",
+        "onesummary": "게임에서 내는 문제를 키보드를 활용하여 입력해서 단어를 맞히는 게임",
+        "img": "./images/4.엔젤타자왕.png"
     },
     {
         "id": 5,
-        "title": "황새 게임",
-        "theme": "아케이드",
-        "times": "100",
-        "onesummary": "계속해서 걸어가는 황새를 컨트롤하여 넘어지지 않고 균형을 잡아 최대한 멀리 가는 것이 목표인 게임",
-        "img": "./images/5.황새게임.png",
+        "title": "방탈출",
+        "theme": "롤플레잉",
+        "times": "2015",
+        "onesummary": "방 안에 존재하는 다양한 도구를 이용하여 방을 탈출하는 게임",
+        "img": "./images/5.방탈출.png"
     },
     {
         "id": 6,
-        "title": "액션! 동물농장",
-        "theme": "롤플레잉",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/6.액션동물농장.png",
+        "title": "아이작",
+        "theme": "액션",
+        "times": "2010",
+        "onesummary": "구양성경에 등장하는 아브라함의 아들 이삭의 희생 이야기를 모티브로 한 게임",
+        "img": "./images/6.아이작.png"
     },
     {
         "id": 7,
-        "title": "오목",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/7.오목.png",
+        "title": "액션! 동물농장",
+        "theme": "롤플레잉",
+        "times": "2010",
+        "onesummary": "조용하던 농장에 말썽을 부리고 달아난 동물을 현상수배 합니다 ",
+        "img": "./images/7.액션동물농장.png"
     },
     {
         "id": 8,
-        "title": "카트라이더",
-        "theme": "스포츠",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/8.카트라이더.png",
+        "title": "팔라독",
+        "theme": "액션",
+        "times": "2010",
+        "onesummary": "유닛을 생상해 왼쪽에서 오른쪽으로 전진시키며 쏜다져 나오는 적을 유닛으로 물리치고 악마군의 기지를 무너트리는 게임",
+        "img": "./images/8.팔라독.png"
     },
     {
         "id": 9,
-        "title": "고향 만두",
-        "theme": "타이쿤",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/9.고향만두.png",
+        "title": "같은동물맞추기",
+        "theme": "2010",
+        "times": "10s",
+        "onesummary": "제한시간 안에 두 가지의 퍼즐을 골라 서로 연결하여 모든 퍼즐을 제거하는 게임",
+        "img": "./images/9.같은동물맞추기.png"
     },
     {
         "id": 10,
-        "title": "사과 게임",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/10.사과게임.jpg",
+        "title": "감옥탈출",
+        "theme": "롤플레잉",
+        "times": "2010",
+        "onesummary": "감옥에 일어난 사건들을 조사하고 주변에 있는 도구들을 이용해 감옥을 탈출한다",
+        "img": "./images/10.감옥탈출.png"
     },
     {
         "id": 11,
-        "title": "수박 게임",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/11.수박게임.png",
+        "title": "고군분투",
+        "theme": "액션",
+        "times": "2010",
+        "onesummary": "마우스 왼쪽과 클릭을 이용하여 장애물을 넘어 엽전을 먹는 게임",
+        "img": "./images/11.고군분투.png"
     },
     {
         "id": 12,
-        "title": "마리오",
-        "theme": "액션",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/2. 마리오.jpg",
+        "title": "붕어빵굽기",
+        "theme": "타이쿤",
+        "times": "2010",
+        "onesummary": "여러 모양의 붕어빵을 틀에 맞게 넣어 손님에게 돈을 받아 점수를 올리는 게임",
+        "img": "./images/12.붕어빵굽기.png"
     },
     {
         "id": 13,
-        "title": "스네이크 게임",
-        "theme": "롤플레잉",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/3. 역타이쿤.jpg",
+        "title": "2048",                
+        "theme": "퍼즐",                  
+        "times": "2010",
+        "onesummary": "방향키를 이용하여 블록을 계속해서 합쳐서 2048을 만드는 게임",                     
+        "img": "./images/13.2048.png"
     },
     {
         "id": 14,
-        "title": "슈팅게임(갤러가)",
-        "theme": "아케이드",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4. 퍼즐함의 힘.jpg",
+        "title": "Flash Cart",
+        "theme": "스포츠",
+        "times": "2005",
+        "onesummary": "레이스 코트를 선택하여 차가 풀쪽으로 가지 않게 운전하는 게임",
+        "img": "./images/14.Flash Cart.png"
     },
     {
         "id": 15,
-        "title": "벽돌깨기",
-        "theme": "아케이드",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4. 퍼즐함의 힘.jpg",
+        "title": "눈빛보내기",                
+        "theme": "타이쿤",                  
+        "times": "2005",                     
+        "onesummary": "맵 안에 있는 남자들에게 눈빛을 보내 자신의 편으로 데리고 와서 점수를 부여 받는 게임",
+        "img": "./images/15.눈빛보내기.png"
     },
     {
-        "id": 16,
-        "title": "2048",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/1.테트리스.png",
+        "id": 16,                            
+        "title": "물불게임",
+        "theme": "롤플레잉",
+        "times": "2005",
+        "onesummary": "맵 곳곳에 빨간 보석과 파란 보석들을 각 캐릭터 별로 먹어 문을 열어 통과하는 게임",
+        "img": "./images/16.물불게임.png"
     },
     {
         "id": 17,
-        "title": "슈의 라면 가게",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/2.슈라면가게.png",
+        "title": "테일즈런너",
+        "theme": "스포츠",
+        "times": "2005",
+        "onesummary": "개인달리기, 팀전, 이어달리기, 서바이벌 등의 달리기라는 기본 모드에 다양한 콘텐츠가 얹혀져 MMORPG처럼 보스를 잡는 레이드 보드도 있다.",
+        "img": "./images/17.테일즈런너.png"
     },
     {
         "id": 18,
-        "title": "The BINDING OF ISAAC",
+        "title": "강의시간의불청객",
         "theme": "타이쿤",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/3.아이작.png",
+        "times": "2000",
+        "onesummary": "화면 위에 9가지 아이템 중 하나를 클릭한 후 타이밍을 잘 맞춰서 숨기 버튼을 누르는 게임",
+        "img": "./images/18.강의시간의불청객.png"
     },
     {
         "id": 19,
-        "title": "메이플스토리",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4.메이플스토리.png",
+        "title": "크레이지아케이드",
+        "theme": "롤플레잉",
+        "times": "2000",
+        "onesummary": "키보드를 이용하여 화면에 나오는 로두매니를 물풍선에 가두어 쓰러뜨린다.",
+        "img": "./images/19.크레이지아케이드.png"
     },
     {
         "id": 20,
-        "title": "황새 게임",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/5.황새게임.png",
+        "title": "건물부수기",
+        "theme": "아케이드",
+        "times": "2000",
+        "onesummary": "위쪽에서 내려오는 건물을 방향키로 부셔서 점수를 기록하는 게임",
+        "img": "./images/20.건물부수기.png"
     },
     {
         "id": 21,
-        "title": "액션! 동물농장",
-        "theme": "코드",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/6.액션동물농장.png",
+        "title": "버블슈터",
+        "theme": "아케이드",
+        "times": "2000",
+        "onesummary": "위쪽에 존재하는 버블을 아래쪽 슈터를 통해 맞춰 3개 이상을 만들어 버블을 제거하는 게임",
+        "img": "./images/21.버블슈터.png"
     },
     {
         "id": 22,
-        "title": "오목",
-        "theme": "박태웅",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/7.오목.png",
+        "title": "구슬치기",
+        "theme": "슈팅",
+        "times": "2000",
+        "onesummary": "마우스를 사용하여 구슬의 방향을 선택한 후 마우스를 잡아 당겼다가 놓으면 구슬이 날아가 상대방의 구슬을 제거하는 게임",
+        "img": "./images/22.구슬치기.png"
     },
     {
         "id": 23,
-        "title": "카트라이더",
-        "theme": "장학",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/8.카트라이더.png",
+        "title": "고기 굽기",
+        "theme": "타이쿤",
+        "times": "2000",
+        "onesummary": "제한시간 안에 많은 고기를 굽으면 되는 게임",
+        "img": "./images/23.고기 굽기.png"
     },
     {
         "id": 24,
         "title": "고향 만두",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/9.고향만두.png",
+        "theme": "타이쿤",
+        "times": "2000",
+        "onesummary": "여러 재료를 이용하여 만두를 완성하세요.",
+        "img": "./images/24.고향만두.png"
     },
     {
         "id": 25,
-        "title": "사과 게임",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/10.사과게임.jpg",
+        "title": "카트라이더",
+        "theme": "스포츠",
+        "times": "2000",
+        "onesummary": "캐릭터와 카트를 선택한 후 운전하여 1등을 차지합니다.",
+        "img": "./images/25.카트라이더.png"
     },
     {
         "id": 26,
-        "title": "수박 게임",
-        "theme": "롤플레잉",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/11.수박게임.png",
+        "title": "오목",
+        "theme": "퍼즐",
+        "times": "2000",
+        "onesummary": "오목판과 오목알을 사용해 흑백이 번갈아 한 수씩 2번 가로, 세로, 대각선 중 한 방향으로 같은 색 돌을 5개를 먼저 늘어놓으면 승리하는 추상전략게임.",
+        "img": "./images/26.오목.png"
     },
     {
         "id": 27,
-        "title": "마리오",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/2. 마리오.jpg",
+        "title": "메이플스토리",
+        "theme": "롤플레잉",
+        "times": "2000",
+        "onesummary": "세계 최초의 횡스크롤 MMORPG를 표방하고 있으며, 다채로운 필드에서의 여행과 모험을 강조한 게임",
+        "img": "./images/27.메이플스토리.png"
     },
     {
         "id": 28,
-        "title": "역타이쿤",
+        "title": "슈의 라면 가게",
         "theme": "타이쿤",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/3. 역타이쿤.jpg",
+        "times": "2000",
+        "onesummary": "슈게임 중 하나로 라면을 끓여 손님에게 팔아 목표액 10,000원을 달성해 클리어하는 게임",
+        "img": "./images/28.슈라면가게.png"
     },
     {
         "id": 29,
-        "title": "퍼즐함의 힘",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4. 퍼즐함의 힘.jpg",
+        "title": "스트라이커즈",
+        "theme": "아케이드",
+        "times": "1995",
+        "onesummary": "주어진 비행기를 이용하여 여러 무기를 먹고 다른 비행기를 잡아 점수를 올리는 게임",
+        "img": "./images/29.스트라이커즈.png"
     },
     {
         "id": 30,
-        "title": "퍼즐함의 힘",
-        "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4. 퍼즐함의 힘.jpg",
+        "title": "고스톱",
+        "theme": "카드",
+        "times": "1995",
+        "onesummary": "총 51장의 카드를 이용하여 3점을 먼저 가진 사람이 이긴다.",
+        "img": "./images/30.고스톱.png"
     },
-        {
+    {
         "id": 31,
-        "title": "퍼즐함의 힘",
+        "title": "틀린그림찾기",
         "theme": "퍼즐",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/4. 퍼즐함의 힘.jpg",
+        "times": "1995",
+        "onesummary": "두 개의 사진을 비교하여 서로 다른 부분을 5곳 찾는 게임",
+        "img": "./images/31.틀린그림찾기.png"
     },
-        {
-        "id": 21,
-        "title": "액션! 동물농장",
-        "theme": "코드",
-        "times": "100",
-        "onesummary": "",
-        "img": "./images/6.액션동물농장.png",
+    {
+        "id": 32,
+        "title": "철권",
+        "theme": "액션",
+        "times": "1995",
+        "onesummary": "상대방을 여러 격투기술을 사용하여 체력바를 다 깍아 승리하는 게임",
+        "img": "./images/32.철권.png"
     },
-
-
-    
+    {
+        "id": 33,
+        "title": "스타디움히어로",
+        "theme": "스포츠",
+        "times": "1995",
+        "onesummary": "공격시간 때 안타나 홈런을 하게 되면 시간이 추가되고 아웃 당하면 시간이 감소하게 되는 게임",
+        "img": "./images/33.스타디움히어로.png"
+    },
+    {
+        "id": 34,
+        "title": "갤러그",
+        "theme": "슈팅",
+        "times": "1990",
+        "onesummary": "플레이어의 기체인 갤럭시안과 갤러그에게 붙잡힌 갤럭시안을 구해 레벨업을 해 적을 총격을 피하면 가격하는 게임",
+        "img": "./images/34.갤러그.png"
+    },
+    {
+        "id": 35,
+        "title": "붐잇",
+        "theme": "아케이드",
+        "times": "1990",
+        "onesummary": "폭탄을 이용하여 상대방의 캐릭터를 죽여 승리하는 게임",
+        "img": "./images/35.봄잇.png"
+    },
+    {
+        "id": 36,
+        "title": "원카드",
+        "theme": "카드",
+        "times": "1990",
+        "onesummary": "순서대로 자신의 패에서 보이게 뒤집어 놓은 카드와 동일한 숫자 또는 무늬의 카드를 뒤집은 카드 위에 계속해서 한 장씩 올려 패를 가장 먼저 소모하는 사람이 이긴다.",
+        "img": "./images/36.원카드.png"
+    },
+    {
+        "id": 37,
+        "title": "벽돌깨기",
+        "theme": "아케이드",
+        "times": "1990",
+        "onesummary": "공을 이용하여 벽돌을 깨는 게임으로 벽돌이 바닥에 닿게 되면 게임오버가 됩니다.",
+        "img": "./images/37.벽돌깨기.png"
+    },
+    {
+        "id": 38,
+        "title": "테트리스",              
+        "theme": "퍼즐",                
+        "times": "1980",              
+        "onesummary": "데트리스의 방식은 한 줄을 없애는 것보다 더 많은 줄을 한번에 없앨수록 점수를 더 높일 수 있다.",
+        "img": "./images/38.테트리스.png"
+    },
+    {
+        "id": 39,
+        "title": "마리오",
+        "theme": "액션",
+        "times": "1980",
+        "onesummary": "맵 안에 있는 모든 별을 장애물이나 몬스터들을 피해 모두 다 모아 문을 통과해 다음 레벨로 넘어가는 게임",
+        "img": "./images/39.마리오.png"
+    },
+    {
+        "id": 40,
+        "title": "스네이크 게임",
+        "theme": "롤플레잉",
+        "times": "1980",
+        "onesummary": "벽과 몸을 피하면서 맵에 떨어진 과일을 먹고 뱀을 키우는 게임",
+        "img": "./images/40.스네이크.png"
+    },
+    {
+        "id": 41,
+        "title": "마작",
+        "theme": "카드",
+        "times": "1980",
+        "onesummary": "주어진 시간안에 같은 모양의 그림끼리 짝을 맞추는 게임",
+        "img": "./images/41.마작.png"
+    },
+    {
+        "id": 42,
+        "title": "슈퍼 발리볼",
+        "theme": "스포츠",
+        "times": "1980",
+        "onesummary": "점수를 내면 상대의 체력바의 게이지가 줄어들고 게이지를 모두 소모하면 패배한다",
+        "img": "./images/42.슈퍼 발리볼.png"
+    },
+    {
+        "id": 43,
+        "title": "Lode Runner",
+        "theme": "스포츠",
+        "times": "1980",
+        "onesummary": "추격해오는 적들을 피해 복잡한 지형으로 되있는 스테이지 내에 있는 모든 금괴를 얻어 탈출한다.",
+        "img": "./images/43.Lode Runner.png"
+    },
+    {
+        "id": 44,
+        "title": "킹 오브 복서",
+        "theme": "스포츠",
+        "times": "1980",
+        "onesummary": "방향키를 사용하여 상대방을 맞을 때마다 에너지 바가 줄어들어 다운이 되면 승리하게 된다",
+        "img": "./images/44.킹 오브 복서.png"
+    },
+    {
+        "id": 45,
+        "title": "아기키우기-엄마를 찾아서",
+        "theme": "롤플레잉",
+        "times": "1980",
+        "onesummary": "주어진 시간안에 같은 모양의 그림끼리 짝을 맞추는 게임",
+        "img": "./images/45.아기키우기-엄마를 찾아서.png"
+    },
+    {
+        "id": 46,
+        "title": "슈의 얼려먹는 초코만들기",
+        "theme": "타이쿤",
+        "times": "1980",
+        "onesummary": "점수를 내면 상대의 체력바의 게이지가 줄어들고 게이지를 모두 소모하면 패배한다",
+        "img": "./images/46.슈의 얼려먹는 초코만들기.png"
+    },
+    {
+        "id": 47,
+        "title": "장미와 동백",
+        "theme": "액션",
+        "times": "1980",
+        "onesummary": "추격해오는 적들을 피해 복잡한 지형으로 되있는 스테이지 내에 있는 모든 금괴를 얻어 탈출한다.",
+        "img": "./images/47.장미와 동백.png"
+    },
+    {
+        "id": 48,
+        "title": "흑룡의 비스타",
+        "theme": "슈팅",
+        "times": "1980",
+        "onesummary": "방향키를 사용하여 상대방을 맞을 때마다 에너지 바가 줄어들어 다운이 되면 승리하게 된다",
+        "img": "./images/48.흑룡의 비스타.png"
+    },
 ]
