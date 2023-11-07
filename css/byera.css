@@ -112,6 +112,7 @@ body {
     flex-wrap: wrap; /* 2행 4열로 버튼을 감쌀 수 있게 함 */
     justify-content: center; /* 수평 가운데 정렬 */
     gap: 10px; /* 각 버튼 간격 조절 */
+    margin-bottom: 50px;
 }
 
 .btn-era {
@@ -131,10 +132,9 @@ body {
     background-color: #2980b9;
 }
 
-/* CSS */
+/*버튼 클릭시 css */
 .button-container button.active {
     background-color: pink;
-    /* 다른 스타일링 */
 }
 
 
