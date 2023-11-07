@@ -107,6 +107,74 @@ body {
     width: 80%;
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* 2행 4열로 버튼을 감쌀 수 있게 함 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    gap: 10px; /* 각 버튼 간격 조절 */
+}
+
+.btn-era {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-era:hover {
+    background-color: #2980b9;
+}
+
+/* CSS */
+.button-container button.active {
+    background-color: pink;
+    /* 다른 스타일링 */
+}
+
+
+/*아래쪽 전체 게임들*/
+.game-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.game-image {
+    width: 100px; 
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* Style for game details */
+.game-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for title and release year */
+.title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.release-year {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Style for summary */
+.game-summary {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 @media screen and (max-width: 1200px) {
     .photo-items {
         margin-left: 145px;
@@ -133,9 +201,6 @@ body {
         height: 80px;
     }
 
-    .active {
-        margin: auto 35px;
-    }
 }
 
 @media screen and (max-width: 950px) {
@@ -191,13 +256,15 @@ body {
         width: 50px;
         height: 50px;
     }
-
-    .active {
-        margin: auto 10px;
+    .button-container {
+        margin-top: 50px;
     }
 }
 
 @media screen and (max-width: 540px) {
+    .button-container {
+        margin-top: 100px;
+    }
     .photos-container{
         display: flex;
         flex-direction: column;
@@ -277,10 +344,6 @@ body {
 
     .texts:nth-child(n+2) {
         margin-top: -5px;
-    }
-    
-    .active {
-        margin: 20px  5px;
     }
     
     .photo img{

@@ -42,7 +42,6 @@ function showGamesByTheme(theme) {
 
 function showAllGames() {
     const gameshelf = document.querySelector(".gameshelf");
-    gameshelf.innerHTML = '';
 
     games.forEach(game => {
         const gameItem = createGameItem(game);
@@ -83,7 +82,7 @@ document.getElementById("searchInput").addEventListener("keydown", function(even
     }
 });
 
-// 이미 존재하는 click 이벤트에 대한 코드를 캡슐화하는 것이 좋습니다.
+// 이미 존재하는 click 이벤트에 대한 코드를 캡슐화
 searchButton.addEventListener("click", searchFunction);
 
 function searchFunction() {
@@ -174,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pagination section
     const pagination = document.querySelector(".pagination");
 
-    // Function to calculate the number of pages based on the items per page
     function updatePagination() {
         const numberOfPages = Math.ceil(gameItems.length / itemsPerPage);
 

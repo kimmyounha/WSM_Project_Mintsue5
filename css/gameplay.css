@@ -46,6 +46,8 @@ height: 6.25em;
 border: none;
 resize: none;
 outline-color: #ffffff;
+margin-top: 10px;
+margin-left: 10px;
 }
 
 .row{
