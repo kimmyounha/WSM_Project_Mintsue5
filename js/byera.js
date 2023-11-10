@@ -57,14 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentSelectedYear = selectedYear;
                 selectedItemByEra.textContent = selectedYear === '' ? 'all' : selectedYear;
             }
- 
+
             buttons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
+            this.classList.add('active'); 
             button.addEventListener('click', function() {
                 if (this.classList.contains('active')) {
                   this.classList.remove('active');
+                //   buttons.forEach(btn => btn.classList.remove('active'));
+                  console.log(this.classList + "|active 삭제");
                 } else {
-                  this.classList.add('active');      
+                  this.classList.add('active');
+                  console.log(this.classList + "|active 추가");      
                 }
               });
 

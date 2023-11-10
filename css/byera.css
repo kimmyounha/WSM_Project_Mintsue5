@@ -5,39 +5,37 @@
 
 body {
     background-color: #000;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
-/*게임 이름 숨기기*/
+/*게임타이틀 숨기기*/
 .text-items {
     visibility: hidden;
 }
 
-.photos-container {
+/*메인*/
+.Byera {
     display: flex;
     flex-direction: column;
 }
 
-.photo-container {
+/*게임 도트 선*/
+.game-container {
     border-top: 1px solid #ffffff;
     margin-right: 10px;
-    margin-bottom: 100px;
-    margin-top: 50px;
 }
 
-.photo-container:nth-child(n+3){
-    border-bottom: 1px solid #fff;
-    margin-bottom: 10px;
-}
-
-.photo-containers{
+.photo-container,
+.dotbox,
+.yearbox,
+.guide-container,
+.photo-items{
     display: flex;
     flex-direction: row;
 }
 
+/*게임 이미지 2개 묶음*/
 .photo-items {
-    display: flex;
-    flex-direction: row;
     margin-left: 185px;
 }
 
@@ -50,12 +48,6 @@ body {
     border: 2px solid #ffffff5e;
 }
 
-.dots,
-.textdox {
-    display: flex;
-    flex-direction: row;
-}
-
 .dot {
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
@@ -65,61 +57,35 @@ body {
     margin-top: -7px;
 }
 
-
-.text {
+/*도트 밑 연도*/
+.year {
     margin-left: 270px;
     margin-top: 10px;
 }
 
-.text:nth-child(n+2) {
+.year:nth-child(n+2) {
     margin-left: 260px;
 }
 
+/*모든 이미지*/
 .photo img,
-.gamePhoto img {
+.game-image{
     width: 100px;
     height: 100px;
     object-fit: cover;
 }
 
-.button-items {
-    text-align: center;
-    margin: 10px 50px;
-}
-
-.active {
-    margin: auto 95px;
-}
-
-.guide-container {
+/*연도별 버튼*/
+.button-itmes {
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 150px;
+    margin-bottom: 30px;
 }
-
-.guide-container:last-child {
-    margin-bottom: 50px;
-}
-
-.items-container {
-    margin: auto 15px;
-    border:1px solid #fff;
-    width: 80%;
-}
-
-.button-container {
-    display: flex;
-    flex-wrap: wrap; /* 2행 4열로 버튼을 감쌀 수 있게 함 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    gap: 10px; /* 각 버튼 간격 조절 */
-    margin-bottom: 50px;
-}
-
 .btn-era {
     display: block;
-    width: 100px;
-    height: 40px;
-    margin: 5px;
+    width: 130px;
+    height: 50px;
     background-color: #3498db;
     color: #ffffff;
     border: none;
@@ -144,18 +110,17 @@ body {
     align-items: center;
     margin-bottom: 20px;
 }
-.game-image {
-    width: 100px; 
-    height: 100px;
-    margin-right: 20px;
-}
 
-/* Style for game details */
+/*게임 설명글*/
 .game-details {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
+.selectedItembyera {
+    margin-top: 30px;
+}
 /* Style for title and release year */
 .title {
     font-weight: bold;
@@ -175,133 +140,230 @@ body {
     line-height: 1.4;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .photo-items {
-        margin-left: 145px;
+        margin-left: 148px;
     }
     
     .photo-items:nth-child(n+2) {
-        margin-left: 65px;
+        margin-left: 68px;
     }
     
     .dot {
-        margin-left: 220px;
+        margin-left: 225px;
     }
     
-    .text {
-        margin-left: 210px;
+    .year {
+        margin-left: 213px;
     }
     
-    .text:nth-child(n+2) {
-        margin-left: 198px;
+    .year:nth-child(n+2) {
+        margin-left: 203px;
     }
     
-    .photo img {
+    .photo img,
+    .game-image{
         width: 80px;
         height: 80px;
     }
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1060px) {
     .photo-items {
-        margin-left: 93px;
+        margin-left: 122px;
     }
     
     .photo-items:nth-child(n+2) {
-        margin-left: 25px;
+        margin-left: 48px;
     }
     
     .dot {
-        margin-left: 160px;
+        margin-left: 187px;
+        width: 11px;
+        height: 11px;
     }
     
-    .text {
-        margin-left: 145px;
+    .year {
+        margin-left: 178px;
+        font-size: 14px;
     }
     
-    .text:nth-child(n+2) {
-        margin-left: 140px;
+    .year:nth-child(n+2) {
+        margin-left: 167px;
     }
-
-    .photo img {
+    
+    .photo img,
+    .game-image{
         width: 70px;
         height: 70px;
     }
 
+    .button-itmes {
+        gap: 90px;
+    }
+
+    .btn-era {
+        width: 120px;
+        height: 40px;
+    }    
+
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
     .photo-items {
-        margin-left: 70px;
-    }
-    
-    .photo-items:nth-child(n+2) {
-        margin-left: 18px;
-    }
-    
-    .dot {
-        margin-left: 115px;
-    }
-    
-    .text {
-        margin-left: 105px;
-    }
-    
-    .text:nth-child(n+2) {
         margin-left: 92px;
     }
     
-    .photo img {
-        width: 50px;
-        height: 50px;
+    .photo-items:nth-child(n+2) {
+        margin-left: 26px;
     }
-    .button-container {
-        margin-top: 50px;
+    
+    .dot {
+        margin-left: 155px;
+    }
+    
+    .year {
+        margin-left: 145px;
+    }
+    
+    .year:nth-child(n+2) {
+        margin-left: 135px;
+    }
+
+    .photo img,
+    .game-image{
+        width: 65px;
+        height: 65px;
+    }
+
+    .button-itmes {
+        gap: 60px;
+    }
+
+    .btn-era {
+        width: 100px;
+        height: 35px;
+    } 
+}
+
+@media screen and (max-width: 750px) {
+    .photo-items {
+        margin-left: 82px;
+    }
+    
+    .photo-items:nth-child(n+2) {
+        margin-left: 24px;
+    }
+
+    .dot {
+        margin-left: 135px;
+        width: 9px;
+        height: 9px;
+        margin-top: -5px;
+    }
+    
+    .year {
+        margin-left: 126px;
+        font-size: 12px;
+    }
+    
+    .year:nth-child(n+2) {
+        margin-left: 118px;
+    }
+    
+    .photo img,
+    .game-image{
+        width: 55px;
+        height: 55px;
+    }
+    .button-items {
+        margin-top: 30px;
+        margin-left: -10px;
+    }
+
+    .button-items:last-child {
+        margin-bottom: 40px;
     }
 }
 
-@media screen and (max-width: 540px) {
-    .button-container {
-        margin-top: 100px;
+@media screen and (max-width: 660px) {
+    .photo-items {
+        margin-left: 60px;
     }
-    .photos-container{
+    
+    .photo-items:nth-child(n+2) {
+        margin-left: 7px;
+    }
+
+    .dot {
+        margin-left: 108px;
+    }
+    
+    .year {
+        margin-left: 99px;
+    }
+    
+    .year:nth-child(n+2) {
+        margin-left: 91px;
+    }
+
+    .photo img,
+    .game-image{
+        width: 50px;
+        height: 50px;
+    }
+
+    .button-itmes {
+        gap: 40px;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+
+    .photo-container,
+    .button-container,
+    .dotbox,
+    .yearbox{
         display: flex;
         flex-direction: column;
     }
 
-    .photo-containers {
+    .button-itmes {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
-    
-    .photo-container {
+
+    .button-itmes:first-child {
+        margin-top: 50px;
+    }
+ 
+    /*점 밑에 있는 왼쪽 선*/
+    .game-container {
         display: flex;
         flex-direction: row;
         border-left: 1px solid #ffffff;
         border-top: 1px solid #000000;
-        margin-left: 10px;
-        margin-bottom: 0px;
-        margin-top: -70px;
-    }
-
-    .photo-container:nth-child(n+3){
-        border: 1px solid #ffffff;
-        border-left: #000;
-        border-right: #000;
+        margin-left: 25px;
         margin-bottom: 0px;
         margin-top: 100px;
     }
 
-    .text-items {
-        visibility: visible;
-        margin-top: 124px;
-        margin-left: 10px;
+    /*옆 선 가운데 뚫림 해결*/
+    .dotbox:first-child {
+        margin-bottom: 160px;
     }
 
-    .dots {
-        display: flex;
-        flex-direction: column;
+    .game-container:nth-child(n+2) {
+        margin-top: 0px;
+    }
+
+    /*게임 타이틀*/
+    .text-items {
+        visibility: visible;
+        margin-top: 145px;
+        margin-left: 50px;
     }
     
     .dot {
@@ -310,48 +372,62 @@ body {
         width: 13px;
         height: 13px;
         margin-left: -6px;
-        margin-top: 150px;
-    }
-    
-    .textdox {
-        display: flex;
-        flex-direction: column;
+        margin-top: 170px;
     }
 
-    .text {
-        margin-left: 0px;
-        margin-top: 140px;
+    .dot:first-child,
+    .year:first-child {
+        margin-top: 0px;
     }
 
-    .text:nth-child(n+2) {
-        margin-left: 0px;
+    .year {
+        margin-left: 5px;
+        margin-top: 164px;
+    }
+
+    .year:nth-child(n+2) {
+        margin-left: 5px;
+    }
+ 
+    /*연도별 게임 사진 여백, 게임 타이틀*/
+    .text-items:first-child {
+        margin-top: -23px;
+    }
+
+    .photo-items:first-child{
+        margin-top: -33px;
     }
 
     .photo-items {
-        margin-left: 10px;
+        margin-left: 15px;
         width: 120px;
-        margin-top: 125px;
     }
 
     .photo-items:nth-child(n+2) {
         margin-left: 10px;
-        margin-top: 115px;
+        margin-top: 102px;
     }
     
-    .texts {
+    .text {
         width: 150px;
+        font-size: 14px;
     }
 
-    .texts:nth-child(n+2) {
+    .text:nth-child(n+2) {
         margin-top: -5px;
     }
     
-    .photo img{
-        width: 50px;
-        height: 50px;
-        margin: auto 5px;
+    .photo img {
+        width: 80px;
+        height: 80px;
+        margin-right: 80px;
     }
-    
+
+    .game-image{
+        width: 95px;
+        height: 95px;
+    }
+
     .guide-container {
         display: flex;
         flex-direction: row;
@@ -361,4 +437,5 @@ body {
     .items-container {
         margin-left: 20px;
     }
+    
 }

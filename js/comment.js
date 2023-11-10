@@ -1,20 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const commentForm = document.getElementById('commentForm');
-    const commentInput = document.getElementById('commentInput');
+    const commentForm = document.getElementById("commentForm");
+    const commentContainer = document.querySelector(".comment1-container");
 
-    commentForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the default form submission
+    commentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-        const comment = commentInput.value; // Get the comment text
+        const commentInput = document.getElementById("commentInput");
+        const commentText = commentInput.value.trim(); // Trim leading/trailing spaces
 
-        // Here you can save the 'comment' to comment.js or perform any other desired action
-        // For example, if using Local Storage:
-        localStorage.setItem('userComment', comment);
+        if (commentText !== "") {
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment1-box");
 
-        // Clear the form after submission (Optional)
-        commentInput.value = '';
+            const profileImage = document.createElement("img");
+            profileImage.classList.add("profile-image");
+            profileImage.src = "images/1.수박게임.png";
+            profileImage.alt = "프로필 이미지";
 
-        // Alert the user or perform any other actions upon successful submission
-        alert('Comment submitted successfully!');
+            const commentContent = document.createElement("div");
+            commentContent.classList.add("comment-content");
+            commentContent.textContent = commentText;
+
+            commentDiv.appendChild(profileImage);
+            commentDiv.appendChild(commentContent);
+            commentContainer.appendChild(commentDiv);
+
+            commentInput.value = "";
+        }
     });
 });

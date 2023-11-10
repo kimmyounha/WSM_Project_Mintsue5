@@ -26,8 +26,3 @@ gameImageDiv.innerHTML = `<img src="${gameImage}" />`;
 
 const titleDiv = document.getElementsByClassName("title")[1];
 titleDiv.innerHTML = title;
-
-const themeDiv = document.getElementsByClassName("theme")[1];
-themeDiv.innerHTML = theme;
-const timesDiv = document.getElementsByClassName("times")[1];
-timesDiv.innerHTML = times;

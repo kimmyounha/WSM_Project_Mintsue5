@@ -1,109 +1,178 @@
-main{
-  margin: 0 auto;
-  margin-top: calc(44px + 100px);
-  margin-bottom: 100px;
-}
-/*게임 title, img*/
-.image-info-groups {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding-bottom: 50px;
-border-bottom: 1px solid #0A1128;
+body{
+  background-color: #000000;
+  color: #ffffff;
 }
 
-.book-image{
-width: 100%;
-height: 100%;
+main{
+    margin: 0 auto;
+    margin-top: calc(44px + 100px);
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*게임 title, img*/
+.image-info-groups {
+  width: 900px;
+  height: 600px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #ffffff;
+}
+  
+.book-image,
+.book-image img{
+  width: 100%;
+  height: 100%;
 }
 
 .book-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  object-fit:fill;
 }
 
-.info{
-width: 100%;
-display: flex;
-justify-content: left;
-text-align: left;
-align-items: flex-start;
+.titles{
+  width: 900px;
+  display: flex;
+  text-align: left;
 }
-
+  
 .write {
-  margin-top: 30px;
-}  
+  display: flex;
+  text-align: left;
+  width: 900px;
+  padding-top: 30px;
+  margin-bottom: 5px;
+} 
+
 /*댓글입력 받는 부분*/
-.comment-reg{
-border: solid 3px rgb(0, 0, 0);
+.comment-reg {
+  width: 900px;
+  margin-bottom: 70px;
+  border: solid 2px rgb(255, 255, 255);
 }
 
 textarea {
-width: 90%;
-height: 6.25em;
-border: none;
-resize: none;
-outline-color: #ffffff;
-margin-top: 10px;
-margin-left: 10px;
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+  background-color: #000000;
+  color: #ffffff;
 }
 
+textarea:focus { 
+  outline:none;
+}
+ 
 .row{
-display: flex;
-margin-left: 0px;
-border-top: solid #0A1128 3px ;
-width: 100%;
-justify-content: right;
-}
-
-.comment-button {
-width: 20%;
-color: #0A1128;
-background-color: #CCCCCC;
-border: none; /* 테두리 제거 */
-outline: none; /* 포커스 시 테두리 제거 */
-}
-
-.comment-button:hover {
-background-color: #bbb;
-}
-
-
-/*댓글 보여주는 부분*/
-.comment-box {
   display: flex;
+  margin-left: 0px;
+  /* border-top: solid #ffffff 3px ; */
+  width: 100%;
+  justify-content: right;
+  border: solid 2px rgb(255, 255, 255);
+}
+
+.comment1-box {
+  display: flex;
+  margin-bottom: 20px;
   align-items: center;
-  justify-content: center;
-  padding: 6px;
   border-radius: 55px; /* 둥근 사각형으로 설정 */
-  transition: width 0.3s;
-  margin-top: 50px;
-  background-color: #0A1128;
-  color: white;
+  background-color: #a3a3a3;
+  padding-right: 30px;
+  width: fit-content; /*자기 크기만큼 설정 ⭐⭐⭐*/
   
 }
 
-.profile-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
+.comment-button {
+  width: 20%;
+  background-color: #ffffff;
+  border: none; /* 테두리 제거 */
+  outline: none; /* 포커스 시 테두리 제거 */
+  font-weight: bold;
 }
 
-.comment-content {
-  flex: 1;
+.profile-image {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin: 5px 5px;
+}
+
+textarea,
+.comment-content,
+.comment-button,
+.write {
+  font-size: 17px;
+}
+
+/* 태블릿 사이즈에 대한 스타일 변경 */
+@media (max-width: 950px) {
+  .image-info-groups {
+    width: 700px;
+    height: 400px;
+  }
+
+  .write,
+  .comment-reg,
+  .titles {
+    width: 700px;
+  } 
+
 }
 
 /* 태블릿 사이즈에 대한 스타일 변경 */
 @media (max-width: 720px) {
 
+  main {
+    font-size: 20px;
+  }
+
+  .image-info-groups {
+    width: 480px;
+    height: 350px;
+  }
+
+  .write,
+  .comment-reg,
+  .titles {
+    width: 480px;
+  } 
+
+  textarea,
+  .comment-content,
+  .comment-button,
+  .write {
+    font-size: 14px;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+
 }
 
 /* 핸드폰 사이즈에 대한 스타일 변경 */
 @media (max-width: 549px) {
-  main{
-      margin-top: calc(44px + 70px);
-  }
+    main{
+        margin-top: calc(44px + 120px);
+        font-size: 16px;
+    }
+
+    textarea,
+    .comment-content,
+    .comment-button,
+    .write {
+      font-size: 12px;
+    }
+  
+
+    .profile-image {
+      width: 40px;
+      height: 40px;
+    }
+
 }
