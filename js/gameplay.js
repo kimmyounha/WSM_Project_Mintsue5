@@ -21,7 +21,7 @@ let theme = gameData.theme;
 let times = gameData.times;
 let gameImage = gameData.img;
 
-const gameImageDiv = document.getElementsByClassName("book-image")[0];
+const gameImageDiv = document.getElementsByClassName("game-image")[0];
 gameImageDiv.innerHTML = `<img src="${gameImage}" />`;
 
 const titleDiv = document.getElementsByClassName("title")[1];

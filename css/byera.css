@@ -11,6 +11,7 @@ body {
 /*게임타이틀 숨기기*/
 .text-items {
     visibility: hidden;
+    font-size: 10px;
 }
 
 /*메인*/
@@ -68,20 +69,39 @@ body {
 }
 
 /*모든 이미지*/
-.photo img,
-.game-image{
+.photo img{
     width: 100px;
     height: 100px;
     object-fit: cover;
+    border-radius: 3px;
+}
+
+.game-image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 2px;
 }
 
 /*연도별 버튼*/
 .button-itmes {
+    width: 90%;
     display: flex;
+    margin-left: 70px;
     justify-content: center;
     gap: 150px;
-    margin-bottom: 30px;
+    padding: 25px;
 }
+
+.button-itmes:first-child {
+    border-top: 1px solid #ffffff;
+}
+
+.button-itmes:last-child {
+    border-bottom: 1px solid #ffffff;
+}
+
 .btn-era {
     display: block;
     width: 130px;
@@ -90,7 +110,7 @@ body {
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -103,12 +123,11 @@ body {
     background-color: pink;
 }
 
-
 /*아래쪽 전체 게임들*/
 .game-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /*게임 설명글*/
@@ -160,12 +179,6 @@ body {
     .year:nth-child(n+2) {
         margin-left: 203px;
     }
-    
-    .photo img,
-    .game-image{
-        width: 80px;
-        height: 80px;
-    }
 
 }
 
@@ -193,19 +206,20 @@ body {
         margin-left: 167px;
     }
     
-    .photo img,
-    .game-image{
+    .photo img{
         width: 70px;
         height: 70px;
     }
 
     .button-itmes {
         gap: 90px;
+        margin-left: 40px;
     }
 
     .btn-era {
         width: 120px;
         height: 40px;
+        font-size: 15px;
     }    
 
 }
@@ -231,8 +245,7 @@ body {
         margin-left: 135px;
     }
 
-    .photo img,
-    .game-image{
+    .photo img{
         width: 65px;
         height: 65px;
     }
@@ -244,6 +257,7 @@ body {
     .btn-era {
         width: 100px;
         height: 35px;
+        font-size: 14px;
     } 
 }
 
@@ -272,14 +286,12 @@ body {
         margin-left: 118px;
     }
     
-    .photo img,
-    .game-image{
+    .photo img{
         width: 55px;
         height: 55px;
     }
     .button-items {
         margin-top: 30px;
-        margin-left: -10px;
     }
 
     .button-items:last-child {
@@ -308,8 +320,7 @@ body {
         margin-left: 91px;
     }
 
-    .photo img,
-    .game-image{
+    .photo img{
         width: 50px;
         height: 50px;
     }
@@ -333,6 +344,7 @@ body {
     .button-itmes {
         display: flex;
         flex-direction: row;
+        margin-left: 25px;
     }
 
     .button-itmes:first-child {
@@ -362,7 +374,7 @@ body {
     /*게임 타이틀*/
     .text-items {
         visibility: visible;
-        margin-top: 145px;
+        margin-top: 147px;
         margin-left: 50px;
     }
     
@@ -391,7 +403,7 @@ body {
  
     /*연도별 게임 사진 여백, 게임 타이틀*/
     .text-items:first-child {
-        margin-top: -23px;
+        margin-top: -15px;
     }
 
     .photo-items:first-child{
@@ -426,6 +438,7 @@ body {
     .game-image{
         width: 95px;
         height: 95px;
+        margin-bottom: 40px;
     }
 
     .guide-container {
@@ -437,5 +450,9 @@ body {
     .items-container {
         margin-left: 20px;
     }
-    
+
+    .game-details {
+        margin-top: -25px;
+    }
+
 }

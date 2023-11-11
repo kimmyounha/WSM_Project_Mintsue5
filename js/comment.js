@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const profileImage = document.createElement("img");
             profileImage.classList.add("profile-image");
-            profileImage.src = "images/1.수박게임.png";
+
+            // Generate a random number between 1 and 5
+            const randomImageNumber = Math.floor(Math.random() * 11) + 1;
+
+            // Set the source of the image dynamically
+            profileImage.src = `images/profile/comment-img${randomImageNumber}.png`;
             profileImage.alt = "프로필 이미지";
 
             const commentContent = document.createElement("div");
