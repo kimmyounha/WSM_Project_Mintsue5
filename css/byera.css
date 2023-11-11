@@ -69,19 +69,21 @@ body {
 }
 
 /*모든 이미지*/
-.photo img{
+.photo img,
+.game-image{
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 3px;
 }
 
+.game-image{
+    width: 120px;
+    height: 120px;
+}
+
 .game-image {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
     margin-right: 15px;
-    border-radius: 2px;
 }
 
 /*연도별 버튼*/
@@ -179,6 +181,11 @@ body {
     .year:nth-child(n+2) {
         margin-left: 203px;
     }
+    
+    .photo img {
+        width: 80px;
+        height: 80px;
+    }
 
 }
 
@@ -209,6 +216,11 @@ body {
     .photo img{
         width: 70px;
         height: 70px;
+    }
+
+    .game-image{
+        width: 100px;
+        height: 100px;
     }
 
     .button-itmes {
@@ -359,7 +371,7 @@ body {
         border-top: 1px solid #000000;
         margin-left: 25px;
         margin-bottom: 0px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     /*옆 선 가운데 뚫림 해결*/
